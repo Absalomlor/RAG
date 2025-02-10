@@ -1,8 +1,6 @@
 import chromadb
 import pandas as pd
 from chromadb.utils import embedding_functions
-import nltk
-import spacy
 import pythainlp
 import pythainlp.util
 from pythainlp import word_tokenize
