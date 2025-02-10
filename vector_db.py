@@ -45,4 +45,3 @@ def retrieve_relevant_jobs(query, top_k=5):
     return []
 
 print(f"Success Yahoooo!!!")
-
