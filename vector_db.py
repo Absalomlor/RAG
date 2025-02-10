@@ -6,7 +6,6 @@ import spacy
 import pythainlp
 import pythainlp.util
 from pythainlp import word_tokenize
-import marisa_trie
 from dotenv import load_dotenv
 
 load_dotenv()
