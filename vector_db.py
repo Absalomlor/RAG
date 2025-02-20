@@ -44,4 +44,4 @@ def retrieve_relevant_jobs(query, top_k=5):
         return retrieved_jobs
     return []
 
-print(f"Success Yahoooo!!!")
+print(f"Success!")

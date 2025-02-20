@@ -14,6 +14,7 @@ def generate_answer_with_llm(query, context):
     :param context: ข้อมูลประกอบที่ใช้ตอบคำถาม
     :return: คำตอบจาก LLM
     """
+    
     prompt = f"ข้อมูลที่เกี่ยวข้อง:\n{context}\n\nตอบคำถามต่อไปนี้:\n{query}"
 
     response = requests.post(TYPHOON_ENDPOINT, json={
