@@ -19,7 +19,7 @@ def generate_answer_with_llm(query, context):
 
     response = requests.post(TYPHOON_ENDPOINT, json={
         "model": "typhoon-v2-70b-instruct",
-        "max_tokens": 512,
+        "max_tokens": 256,
         "messages": [{"content": prompt, "role": "user"}],
         "temperature": 0.7,
         "top_p": 0.95,
@@ -28,6 +28,7 @@ def generate_answer_with_llm(query, context):
         "min_p": 0 
     }, headers={
         "Authorization": f"Bearer {TYPHOON_API_KEY}",
+        "Content-Type": "application/json"
     })
 
     if response.status_code == 200:

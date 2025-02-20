@@ -12,7 +12,11 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
- 
+
+@app.get("/")
+def root():
+    return {"message": "RAG Chatbot API is running!"}
+
 @app.get("/rag/{query}")
 def get_rag_response(query: str):
     relevant_jobs = retrieve_relevant_jobs(query, top_k=3)
