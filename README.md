@@ -1,3 +1,12 @@
+---
+title: My Rag Chatbot
+emoji: 🐢
+colorFrom: blue
+colorTo: green
+sdk: docker
+pinned: false
+---
+
 # My RAG Chatbot API
 
 This is an API-based chatbot using Retrieval-Augmented Generation (RAG).
