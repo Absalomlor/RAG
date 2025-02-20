@@ -13,7 +13,6 @@ ENV TRANSFORMERS_CACHE="/app/huggingface"
 ENV HF_HUB_CACHE="/app/huggingface"
 RUN mkdir -p /app/Database && chmod -R 777 /app/Database
 
-EXPOSE 8080
+EXPOSE 7860
 
-CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8080"]
-
+CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "7860"]
