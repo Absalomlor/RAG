@@ -12,6 +12,8 @@ os.environ["HF_HOME"] = "/app/huggingface"
 os.environ["TRANSFORMERS_CACHE"] = "/app/huggingface"
 os.environ["HF_HUB_CACHE"] = "/app/huggingface"
 
+DB_PATH = "/app/Database"
+os.makedirs(DB_PATH, exist_ok=True)
 load_dotenv()
 
 data = pd.read_excel('Jobdb.xlsx')
@@ -22,7 +24,8 @@ job_names = data['Job'].tolist()
 documents = data['Description'].str.replace('\n', '').tolist()
 
 embedding_func = embedding_functions.SentenceTransformerEmbeddingFunction("paraphrase-multilingual-mpnet-base-v2", normalize_embeddings=True)
-client = chromadb.PersistentClient(path="Database")
+client = chromadb.PersistentClient(path=DB_PATH)
+
 COLLECTION_NAME = "job_docs"
 collection = client.get_or_create_collection(
     name = COLLECTION_NAME,

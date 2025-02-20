@@ -11,6 +11,7 @@ RUN mkdir -p /app/huggingface && chmod -R 777 /app/huggingface
 ENV HF_HOME="/app/huggingface"
 ENV TRANSFORMERS_CACHE="/app/huggingface"
 ENV HF_HUB_CACHE="/app/huggingface"
+RUN mkdir -p /app/Database && chmod -R 777 /app/Database
 
 EXPOSE 8080
 
