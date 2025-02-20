@@ -5,6 +5,9 @@ import pythainlp
 import pythainlp.util
 from pythainlp import word_tokenize
 from dotenv import load_dotenv
+import os
+
+os.environ["PYTHAINLP_DATA_DIR"] = "/app/pythainlp-data"
 
 load_dotenv()
 
