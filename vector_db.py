@@ -8,6 +8,9 @@ from dotenv import load_dotenv
 import os
 
 os.environ["PYTHAINLP_DATA_DIR"] = "/app/pythainlp-data"
+os.environ["HF_HOME"] = "/app/huggingface"
+os.environ["TRANSFORMERS_CACHE"] = "/app/huggingface"
+os.environ["HF_HUB_CACHE"] = "/app/huggingface"
 
 load_dotenv()
 

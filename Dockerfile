@@ -7,6 +7,10 @@ COPY . /app
 RUN pip install --no-cache-dir -r requirements.txt
 RUN mkdir -p /app/pythainlp-data && chmod -R 777 /app/pythainlp-data
 ENV PYTHAINLP_DATA_DIR="/app/pythainlp-data"
+RUN mkdir -p /app/huggingface && chmod -R 777 /app/huggingface
+ENV HF_HOME="/app/huggingface"
+ENV TRANSFORMERS_CACHE="/app/huggingface"
+ENV HF_HUB_CACHE="/app/huggingface"
 
 EXPOSE 8080
 
