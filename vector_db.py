@@ -11,7 +11,7 @@ os.environ["PYTHAINLP_DATA_DIR"] = "/app/pythainlp-data"
 
 load_dotenv()
 
-data = pd.read_csv('jobsdb_20240829.csv')
+data = pd.read_excel('Jobdb.xlsx')
 data["Description"] = data["Description"].fillna(data["Job"])
 
 job_ids = data.index.to_list()
