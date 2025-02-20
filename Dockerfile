@@ -5,7 +5,8 @@ WORKDIR /app
 COPY . /app
 
 RUN pip install --no-cache-dir -r requirements.txt
-RUN mkdir -p /app/pythainlp-data
+RUN mkdir -p /app/pythainlp-data && chmod -R 777 /app/pythainlp-data
+ENV PYTHAINLP_DATA_DIR="/app/pythainlp-data"
 
 EXPOSE 8080
 
